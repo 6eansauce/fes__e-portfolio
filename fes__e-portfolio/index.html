@@ -1,11 +1,183 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    test
-</body>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/fb4e81fea9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section id="about-me">
+      <nav>
+        <div class="personal__logo">Oscar Jovel</div>
+        <ul class="nav__links">
+          <li><a href="" class="nav__link link__hover-effect">Lanugages</a></li>
+          <li><a href="" class="nav__link link__hover-effect">Project</a></li>
+          <li><a href="" class="nav__link nav__link--em">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="flex flex-1">
+        <div class="about-me__info row">
+          <div class="about-me__info--container">
+            <figure class="about-me__img--mask">
+              <img
+                src="./assets/6eansauce.jpg"
+                class="about-me__img"
+                alt="Picture of Me"
+              />
+            </figure>
+
+            <h1 class="about-me__info--title">
+              Hey! I'm <span class="text--purple">Oscar Jovel</span>
+            </h1>
+            <p class="about-me__info--p">
+              I am a
+              <span class="text--purple"
+                >frontend software engineering student</span
+              >
+              with aspirations to build impactful things to solve problems and
+              inspire creativity. I hope to expand my abilities to other areas
+              that can further push me into an exemplory career, and it all
+              starts here at
+              <span class="text--purple">Frontend Simplified.</span>
+            </p>
+
+            <div class="about-me__links">
+              <a href="" class="about-me__link">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="" class="about-me__link">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="" class="about-me__link">
+                <i class="far fa-envelope"></i>
+              </a>
+              <a href="" class="about-me__link">
+                <i class="fas fa-file-pdf"></i>
+              </a>
+            </div>
+          </div>
+
+          <figure class="about-me__img--container">
+            <img
+              src="./assets/undraw_focused-dev_gqoa.svg"
+              class="about-me__img"
+              alt=""
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="languages">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            This is my <span class="text--purple">technology stack</span>
+          </h1>
+          <div class="language__list">
+            <div class="language">
+              <figure class="language__img--wrapper">
+                <img
+                  src="./assets/html5-icon.png"
+                  alt=""
+                  class="language__img"
+                />
+              </figure>
+              <span class="language__name">HTML</span>
+            </div>
+
+            <div class="language">
+              <figure class="language__img--wrapper">
+                <img
+                  src="./assets/css-icon.webp"
+                  alt=""
+                  class="language__img"
+                />
+              </figure>
+              <span class="language__name">CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            My <span class="text--purple">Projects</span>
+          </h1>
+          <ul class="project__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/fes__e-portfolio.png"
+                  alt=""
+                  class="project__img"
+                />
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    FES - Module 2: E-Portfolio
+                  </h3>
+                  <h4 class="project__description--subtitle">HTML, CSS</h4>
+                  <p class="project__description--p">
+                    This is my first project learning at Frontend Simplify.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/6eansauce/fes__e-portfolio"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="row footer__row">
+        <a href="#" class="footer__a">
+          <figure class="footer__logo">
+            <img src="./assets/logo.png" alt="" class="footer__logo--img" />
+          </figure>
+          <span class="footer__logo--popup"
+            >Top <i class="fas fa-arrow-up"></i
+          ></span>
+        </a>
+        <div class="footer__social--list">
+          <a
+            href="https://github.com/6eansauce"
+            class="footer__social--link link__hover-effect link__hover-effect--white"
+            target="_blank"
+            >GitHub</a
+          >
+          <a
+            href="mailto:oscaritojovel@gmail.com"
+            class="footer__social--link link__hover-effect link__hover-effect--white"
+            target="_blank"
+            >Email</a
+          >
+          <a
+            href=""
+            class="footer__social--link link__hover-effect link__hover-effect--white"
+            target="_blank"
+            >--</a
+          >
+        </div>
+        <div class="footer__copyright">2026 Oscar Jovel</div>
+      </div>
+    </footer>
+  </body>
 </html>
