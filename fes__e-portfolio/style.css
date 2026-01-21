@@ -7,8 +7,6 @@
   font-family: "Lato", sans-serif;
 }
 
-/* FES E-Portfolio Video - 1:07:39 */
-
 html {
   scroll-behavior: smooth;
 }
@@ -36,6 +34,30 @@ p {
 
 a {
   text-decoration: none;
+  position: relative;
+}
+
+.link__hover-effect:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -3px;
+  right: 0;
+  transition: all 300ms;
+}
+
+.link__hover-effect:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.link__hover-effect--white:after {
+  background-color: #fff;
+}
+
+.link__hover-effect--black:after {
+  background-color: #000;
 }
 
 li {
@@ -82,7 +104,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  padding: 0 12px;
 
   height: 100px;
   width: 100%;
@@ -219,6 +241,7 @@ TECH - STACK
 .language__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
 }
 
@@ -257,9 +280,10 @@ PROJECTS
 
 .project__wrapper {
   display: flex;
+  justify-content: center;
   position: relative;
-  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
   border-radius: 20px;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
   overflow: hidden;
 }
 
@@ -297,7 +321,6 @@ PROJECTS
 .project__description {
   position: absolute;
   top: 50%;
-  left: 60px;
   transform: translateY(100%);
   max-width: 550px;
   z-index: 3;
@@ -311,12 +334,17 @@ PROJECTS
   font-size: 40px;
 }
 
+.project__description--subtitle {
+  font-size: 20px;
+}
+
 .project__description--p {
   margin: 16px 0;
+  font-size: 18px;
 }
 
 .project__description--link {
-  font-size: 20px;
+  font-size: 28px;
   margin-right: 16px;
 }
 
@@ -383,4 +411,77 @@ footer {
 .footer__a:hover .footer__logo--popup {
   transform: translateX(70px);
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  nav {
+    height: 68px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .about-me__info--p {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  .about-me__img {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .language {
+    width: calc(100% / 3);
+  }
+
+  .project {
+    justify-self: center;
+    width: 90%;
+  }
+
+  .project__description {
+    max-width: 480px;
+  }
+
+  .project__description--title {
+    font-size: 5vw;
+  }
+
+  .project__description--subtitle {
+    font-size: 3vw;
+  }
+
+  .project__description--p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav__item:not(:last-child) {
+    display: none;
+  }
+
+  .about-me__info--p {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .project__description--title {
+    font-size: 6vw;
+  }
+
+  .project__description--subtitle {
+    font-size: 4vw;
+  }
+
+  .project__description--p {
+    display: none;
+  }
+
+  .project__description--links {
+    display: flex;
+    justify-content: end;
+  }
 }
