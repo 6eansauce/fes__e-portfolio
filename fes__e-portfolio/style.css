@@ -37,6 +37,15 @@ a {
   position: relative;
 }
 
+i {
+  transition: all 200ms ease;
+}
+
+i:hover {
+  opacity: 0.7;
+  color: #5d3eff;
+}
+
 .link__hover-effect:after {
   content: "";
   position: absolute;
@@ -174,6 +183,21 @@ ABOUT ME
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  animation: animate-pfp 800ms 200ms backwards;
+}
+
+@keyframes animate-pfp {
+  0% {
+    transform: scale(0);
+  }
+
+  80% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .about-me__img {
@@ -182,18 +206,54 @@ ABOUT ME
 
 .about-me__info--title {
   margin: 16px 0;
+  animation: fadeUp 650ms 400ms backwards;
+}
+
+.about-me__anim--wave {
+  display: inline-block;
+  animation: animate-wave 800ms infinite ease-in-out;
+}
+
+@keyframes animate-wave {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(20deg) translate(7px, 1px);
+  }
+
+  100% {
+    transform: rotate(0) translateX(0);
+  }
 }
 
 .about-me__info--p {
   font-size: 21px;
   font-weight: 600;
   margin-bottom: 28px;
+  animation: fadeUp 650ms 600ms backwards;
+}
+
+.about-me__links {
+  animation: fadeUp 650ms 800ms backwards;
 }
 
 .about-me__link {
   font-size: 20px;
   color: #242424;
   padding: 0 16px;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .about-me__img--container {
@@ -204,6 +264,20 @@ ABOUT ME
 
 .about-me__img {
   width: 100%;
+}
+
+.about-me__graphic {
+  animation: fadeIn 1200ms 800ms backwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 1;
+  }
 }
 
 /* 
